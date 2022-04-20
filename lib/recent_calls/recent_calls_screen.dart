@@ -8,6 +8,8 @@ class RecentCalls extends StatefulWidget {
   State<RecentCalls> createState() => _RecentCallsState();
 }
 
+
+
 class _RecentCallsState extends State<RecentCalls> {
   @override
   Widget build(BuildContext context) {
@@ -26,4 +28,22 @@ class _RecentCallsState extends State<RecentCalls> {
   }
 }
 
+
+
+
+
+class CallInfo extends StatelessWidget {
+  const CallInfo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        color: Colors.orange[300],
+        alignment: Alignment.center,
+        child: const Text("СКОРО БУДЕТ"),
+      ),
+    );
+  }
+}
 

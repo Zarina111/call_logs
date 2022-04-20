@@ -39,7 +39,7 @@ class _CallCardState extends State<CallCard> {
           SizedBox(
             width: 55,
             child: IconButton(
-                onPressed: () => Navigator.pushNamed(context, '/info'),
+                onPressed: () => Navigator.pushNamed(context, '/CallInfo'),
                 icon: const Icon(
                   Icons.info_outlined,
                   color: Colors.lightBlue,
