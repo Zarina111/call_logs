@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         // Путь к корневому виджету
         '/': (context) => const RecentCalls(),
         // Путь к любому другому виджету
-         '/CallInfo': (context) => const CallInfo(),
+         '/CallInfo': (context) => CallInfo(),
       },
       //
 

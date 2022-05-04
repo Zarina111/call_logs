@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CallInfo extends StatelessWidget {
-  const CallInfo({Key? key}) : super(key: key);
+   CallInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -38,7 +38,7 @@ class _CallCardState extends State<CallCard> {
               style: AppTextStyle.regular15()),
           IconButton(
               padding: const EdgeInsets.only(left: 8, right: 21),
-              onPressed: () => Navigator.pushNamed(context, '/info'),
+              onPressed: () => Navigator.pushNamed(context, '/CallInfo'),
               icon: const Icon(
                 Icons.info_outlined,
                 color: AppColor.link,
