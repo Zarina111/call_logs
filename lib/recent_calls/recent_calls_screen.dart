@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:call_logs/recent_calls/call_item.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 import '../styles/colors.dart';
 
@@ -32,14 +33,16 @@ class _RecentCallsState extends State<RecentCalls> {
         ),
 
       ),
-      body: ListView.separated(
-        itemBuilder: (_, int index) => const CallCard(),
-        separatorBuilder: (_, int index) => const Padding(
-          padding: EdgeInsets.only(left: 42),
-          child: Divider(thickness: 0.5, height: 0.5),
-        ),
-        itemCount: 300,
-        physics: const BouncingScrollPhysics(),
+      body: Column(
+        children: [
+          CallCard(date: 'Вчера', person_and_calls: 'Mum (3)',),
+          CallCard(person_and_calls: 'vanya (2)',),
+          FutureBuilder<http.Response>(
+              future: http.get(Uri.parse('https://reqres.in/api/users')),
+              builder: (context, snapshot){
+            return CallCard();
+          })
+    ],
       ),
     );
   }
